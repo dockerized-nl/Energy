@@ -1,7 +1,7 @@
 import requests
 
-bot_token = "6239024779:AAFPw7dtxvhb7Q_EDAQAeCwCYxUauLhL3_8"
-chat_id = "-1001874835620"
+bot_token = 'BOT_TOKEN'
+chat_id = 'CHAT_ID'
 
 command = 'Please use /prijs to get the new charts'
 
