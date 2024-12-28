@@ -10,7 +10,7 @@ current_date = datetime.now(pytz.timezone('GMT'))
 yesterday = current_date + timedelta(days=-1)
 
 
-URL = f"https://api.energyzero.nl/v1/energyprices?fromDate={yesterday.strftime('%Y-%m-%d')}T22:00:00.000Z&tillDate={current_date.strftime('%Y-%m-%d')}T22:00:00.000Z&interval=4&usageType=1&inclBtw=true"
+URL = f"https://api.energyzero.nl/v1/energyprices?fromDate={yesterday.strftime('%Y-%m-%d')}T23:00:00.000Z&tillDate={current_date.strftime('%Y-%m-%d')}T23:00:00.000Z&interval=4&usageType=1&inclBtw=true"
 page = requests.get(URL)
 
 output_page = page.json()
@@ -18,7 +18,6 @@ output_page = page.json()
 average = output_page['average']
 
 output = ""
-
 
 labels = []
 values = []
@@ -41,4 +40,3 @@ plt.axhline(y=float(average), color='orange',
             linestyle='--', linewidth=3, label='Avg')
 plt.savefig(
     f'/root/Energy/images/price_plot_{current_date.strftime("%Y-%m-%d")}.png')
-
