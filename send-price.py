@@ -50,7 +50,7 @@ def logo(message: types.Message):
     current_date = datetime.now(pytz.timezone('Europe/Amsterdam'))
     output = handle_response()
     bot.send_photo(message.chat.id, open(
-        f"/root/Energy/images/price_plot_{current_date.strftime('%Y-%m-%d')}.png", "rb"))
+        f"/app/images/price_plot_{current_date.strftime('%Y-%m-%d')}.png", "rb"))
     bot.reply_to(message, f"{output}")
 
 @bot.message_handler(commands=['help'])

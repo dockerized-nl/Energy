@@ -39,4 +39,4 @@ plt.title('Prijs per uur')
 plt.axhline(y=float(average), color='orange',
             linestyle='--', linewidth=3, label='Avg')
 plt.savefig(
-    f'/root/Energy/images/price_plot_{current_date.strftime("%Y-%m-%d")}.png')
+    f'/app/images/price_plot_{current_date.strftime("%Y-%m-%d")}.png')
